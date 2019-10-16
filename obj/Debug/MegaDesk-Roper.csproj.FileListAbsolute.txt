@@ -45,3 +45,4 @@ C:\Users\kent\source\repos\megadesk_groupwork\bin\Debug\Newtonsoft.Json.xml
 C:\Users\kent\source\repos\megadesk_groupwork\obj\Debug\MegaDesk-Roper.csproj.CopyComplete
 C:\Users\kent\source\repos\megadesk_groupwork\obj\Debug\MegaDesk-Roper.exe
 C:\Users\kent\source\repos\megadesk_groupwork\obj\Debug\MegaDesk-Roper.pdb
+C:\Users\kent\source\repos\megadesk_groupwork\obj\Debug\MegaDesk-Roper.csprojAssemblyReference.cache

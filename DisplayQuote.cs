@@ -18,22 +18,7 @@ namespace MegaDesk_Roper
             ResultsTotalPrice.Text = "hello";
         }
 
-        //private static string CustomerName = AddQuotesForm.customerNameValue;
-        //private static int rushDays = AddQuotesForm.rushDaysValue;
-        //private static int width = AddQuotesForm.widthValue;
-        //private static int depth = AddQuotesForm.depthValue;
-        //private static int numDrawers = AddQuotesForm.numDrawersValue;
-        //private static string surfaceMaterial = AddQuotesForm.surfaceMaterialValue;
-
-        //private static Desk customerDesk = new Desk(width, depth, numDrawers, surfaceMaterial);
-        //private static DeskQuote customerQuote = new DeskQuote(CustomerName, customerDesk, rushDays);
-        private static DeskQuote customerQuote = Program.Quotes.GetLatest();
-        //Program.Quotes.Add(customerQuote);
-
-        
-
-        
-
+        private static DeskQuote customerQuote;
 
         private void BackToMainMenu_Click(object sender, EventArgs e)
         {
@@ -44,6 +29,7 @@ namespace MegaDesk_Roper
 
         private void DisplayQuote_Load(object sender, EventArgs e)
         {
+            customerQuote = Program.Quotes.GetLatest();
             try
             {
                 ResultsCustomerName.Text = customerQuote.getName();
