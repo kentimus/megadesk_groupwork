@@ -91,7 +91,8 @@ namespace MegaDesk_Roper
         public int getPrice()
         {
             return price;
-        }
+        }
+
 
         public string getName()
         {
