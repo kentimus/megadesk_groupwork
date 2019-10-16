@@ -15,6 +15,7 @@ namespace MegaDesk_Roper
         public ViewAllQuotes()
         {
             InitializeComponent();
+            numQuotesLabel.Text = Program.Quotes.GetCount().ToString();
         }
 
         private void BackToMainMenu_Click(object sender, EventArgs e)

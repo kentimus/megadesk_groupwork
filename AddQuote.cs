@@ -148,7 +148,16 @@ namespace MegaDesk_Roper
             numDrawersValue = (int) NumDrawers.Value;
             surfaceMaterialValue = SurfaceMaterial.Text;
 
+            Desk customerDesk = new Desk(widthValue, depthValue, numDrawersValue, surfaceMaterialValue);
+            DeskQuote customerQuote = new DeskQuote(customerNameValue, customerDesk, rushDaysValue);
+            Program.Quotes.Add(customerQuote);
+
+            //private static Desk customerDesk = new Desk(widthValue, depthValue, numDrawersValue, surfaceMaterialValue);
+            //private static DeskQuote customerQuote = new DeskQuote(customerNameValue, customerDesk, rushDaysValue);
+
+
             DisplayQuote viewDisplayQuote = new DisplayQuote();
+
             viewDisplayQuote.Tag = this.Tag;
             viewDisplayQuote.Show();
             Hide();

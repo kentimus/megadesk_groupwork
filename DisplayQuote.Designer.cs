@@ -206,6 +206,7 @@
             this.ResultsCustomerName.Size = new System.Drawing.Size(79, 29);
             this.ResultsCustomerName.TabIndex = 35;
             this.ResultsCustomerName.Text = "label2";
+            this.ResultsCustomerName.Click += new System.EventHandler(this.ResultsCustomerName_Click);
             // 
             // DisplayQuote
             // 

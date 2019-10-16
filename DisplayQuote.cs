@@ -16,17 +16,19 @@ namespace MegaDesk_Roper
         { 
             InitializeComponent();
             ResultsTotalPrice.Text = "hello";
-    }
+        }
 
-        private static string CustomerName = AddQuotesForm.customerNameValue;
-        private static int rushDays = AddQuotesForm.rushDaysValue;
-        private static int width = AddQuotesForm.widthValue;
-        private static int depth = AddQuotesForm.depthValue;
-        private static int numDrawers = AddQuotesForm.numDrawersValue;
-        private static string surfaceMaterial = AddQuotesForm.surfaceMaterialValue;
+        //private static string CustomerName = AddQuotesForm.customerNameValue;
+        //private static int rushDays = AddQuotesForm.rushDaysValue;
+        //private static int width = AddQuotesForm.widthValue;
+        //private static int depth = AddQuotesForm.depthValue;
+        //private static int numDrawers = AddQuotesForm.numDrawersValue;
+        //private static string surfaceMaterial = AddQuotesForm.surfaceMaterialValue;
 
-        private static Desk customerDesk = new Desk(width, depth, numDrawers, surfaceMaterial);
-        private static DeskQuote customerQuote = new DeskQuote(CustomerName, customerDesk, rushDays);
+        //private static Desk customerDesk = new Desk(width, depth, numDrawers, surfaceMaterial);
+        //private static DeskQuote customerQuote = new DeskQuote(CustomerName, customerDesk, rushDays);
+        private static DeskQuote customerQuote = Program.Quotes.GetLatest();
+        //Program.Quotes.Add(customerQuote);
 
         
 
@@ -63,6 +65,11 @@ namespace MegaDesk_Roper
                 ResultsTotalPrice.Text = "Problem calculating total price.";
             }
             
+        }
+
+        private void ResultsCustomerName_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
