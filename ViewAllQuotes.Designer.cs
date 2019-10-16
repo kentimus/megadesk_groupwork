@@ -30,6 +30,7 @@
         {
             this.BackToMainMenu = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.numQuotesLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // BackToMainMenu
@@ -53,11 +54,21 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "View All Quotes";
             // 
+            // numQuotesLabel
+            // 
+            this.numQuotesLabel.AutoSize = true;
+            this.numQuotesLabel.Location = new System.Drawing.Point(81, 97);
+            this.numQuotesLabel.Name = "numQuotesLabel";
+            this.numQuotesLabel.Size = new System.Drawing.Size(46, 17);
+            this.numQuotesLabel.TabIndex = 9;
+            this.numQuotesLabel.Text = "label2";
+            // 
             // ViewAllQuotes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.numQuotesLabel);
             this.Controls.Add(this.BackToMainMenu);
             this.Controls.Add(this.label1);
             this.Name = "ViewAllQuotes";
@@ -71,5 +82,6 @@
 
         private System.Windows.Forms.Button BackToMainMenu;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label numQuotesLabel;
     }
 }

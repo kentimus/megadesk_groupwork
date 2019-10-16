@@ -8,6 +8,10 @@ namespace MegaDesk_Roper
 {
     static class Program
     {
+        public static DeskQuotes Quotes = new DeskQuotes();
+        public static string TestString = "hello Kent";
+
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>

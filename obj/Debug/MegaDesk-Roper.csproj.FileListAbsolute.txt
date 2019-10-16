@@ -12,3 +12,37 @@ C:\Users\kent\source\repos\MegaDesk-Roper\obj\Debug\MegaDesk_Roper.AddQuotesForm
 C:\Users\kent\source\repos\MegaDesk-Roper\obj\Debug\MegaDesk_Roper.DisplayQuote.resources
 C:\Users\kent\source\repos\MegaDesk-Roper\obj\Debug\MegaDesk_Roper.SearchQuotes.resources
 C:\Users\kent\source\repos\MegaDesk-Roper\obj\Debug\MegaDesk_Roper.ViewAllQuotes.resources
+C:\Users\M8K9B\Desktop\CIT 365\MegaDeskGroup\bin\Debug\MegaDesk-Roper.exe.config
+C:\Users\M8K9B\Desktop\CIT 365\MegaDeskGroup\bin\Debug\MegaDesk-Roper.exe
+C:\Users\M8K9B\Desktop\CIT 365\MegaDeskGroup\bin\Debug\MegaDesk-Roper.pdb
+C:\Users\M8K9B\Desktop\CIT 365\MegaDeskGroup\bin\Debug\Newtonsoft.Json.dll
+C:\Users\M8K9B\Desktop\CIT 365\MegaDeskGroup\bin\Debug\Newtonsoft.Json.xml
+C:\Users\M8K9B\Desktop\CIT 365\MegaDeskGroup\obj\Debug\MegaDesk-Roper.csprojAssemblyReference.cache
+C:\Users\M8K9B\Desktop\CIT 365\MegaDeskGroup\obj\Debug\MegaDesk_Roper.AddQuotesForm.resources
+C:\Users\M8K9B\Desktop\CIT 365\MegaDeskGroup\obj\Debug\MegaDesk_Roper.DisplayQuote.resources
+C:\Users\M8K9B\Desktop\CIT 365\MegaDeskGroup\obj\Debug\MegaDesk_Roper.MainMenu.resources
+C:\Users\M8K9B\Desktop\CIT 365\MegaDeskGroup\obj\Debug\MegaDesk_Roper.Properties.Resources.resources
+C:\Users\M8K9B\Desktop\CIT 365\MegaDeskGroup\obj\Debug\MegaDesk_Roper.SearchQuotes.resources
+C:\Users\M8K9B\Desktop\CIT 365\MegaDeskGroup\obj\Debug\MegaDesk_Roper.ViewAllQuotes.resources
+C:\Users\M8K9B\Desktop\CIT 365\MegaDeskGroup\obj\Debug\MegaDesk-Roper.csproj.GenerateResource.cache
+C:\Users\M8K9B\Desktop\CIT 365\MegaDeskGroup\obj\Debug\MegaDesk-Roper.csproj.CoreCompileInputs.cache
+C:\Users\M8K9B\Desktop\CIT 365\MegaDeskGroup\obj\Debug\MegaDesk-Roper.csproj.CopyComplete
+C:\Users\M8K9B\Desktop\CIT 365\MegaDeskGroup\obj\Debug\MegaDesk-Roper.exe
+C:\Users\M8K9B\Desktop\CIT 365\MegaDeskGroup\obj\Debug\MegaDesk-Roper.pdb
+C:\Users\kent\source\repos\megadesk_groupwork\obj\Debug\MegaDesk_Roper.AddQuotesForm.resources
+C:\Users\kent\source\repos\megadesk_groupwork\obj\Debug\MegaDesk_Roper.DisplayQuote.resources
+C:\Users\kent\source\repos\megadesk_groupwork\obj\Debug\MegaDesk_Roper.MainMenu.resources
+C:\Users\kent\source\repos\megadesk_groupwork\obj\Debug\MegaDesk_Roper.Properties.Resources.resources
+C:\Users\kent\source\repos\megadesk_groupwork\obj\Debug\MegaDesk_Roper.SearchQuotes.resources
+C:\Users\kent\source\repos\megadesk_groupwork\obj\Debug\MegaDesk_Roper.ViewAllQuotes.resources
+C:\Users\kent\source\repos\megadesk_groupwork\obj\Debug\MegaDesk-Roper.csproj.GenerateResource.cache
+C:\Users\kent\source\repos\megadesk_groupwork\obj\Debug\MegaDesk-Roper.csproj.CoreCompileInputs.cache
+C:\Users\kent\source\repos\megadesk_groupwork\bin\Debug\MegaDesk-Roper.exe.config
+C:\Users\kent\source\repos\megadesk_groupwork\bin\Debug\MegaDesk-Roper.exe
+C:\Users\kent\source\repos\megadesk_groupwork\bin\Debug\MegaDesk-Roper.pdb
+C:\Users\kent\source\repos\megadesk_groupwork\bin\Debug\Newtonsoft.Json.dll
+C:\Users\kent\source\repos\megadesk_groupwork\bin\Debug\Newtonsoft.Json.xml
+C:\Users\kent\source\repos\megadesk_groupwork\obj\Debug\MegaDesk-Roper.csproj.CopyComplete
+C:\Users\kent\source\repos\megadesk_groupwork\obj\Debug\MegaDesk-Roper.exe
+C:\Users\kent\source\repos\megadesk_groupwork\obj\Debug\MegaDesk-Roper.pdb
+C:\Users\kent\source\repos\megadesk_groupwork\obj\Debug\MegaDesk-Roper.csprojAssemblyReference.cache
