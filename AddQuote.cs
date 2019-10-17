@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -141,6 +143,8 @@ namespace MegaDesk_Roper
 
         private void CreateQuoteButton_Click(object sender, EventArgs e)
         {
+            DeskQuote customerQuote = null;
+
             customerNameValue = CustomerName.Text;
             rushDaysValue = Convert.ToInt32(RushDays.Text);
             widthValue = (int) Width.Value;
@@ -149,8 +153,37 @@ namespace MegaDesk_Roper
             surfaceMaterialValue = SurfaceMaterial.Text;
 
             Desk customerDesk = new Desk(widthValue, depthValue, numDrawersValue, surfaceMaterialValue);
-            DeskQuote customerQuote = new DeskQuote(customerNameValue, customerDesk, rushDaysValue);
+            customerQuote = new DeskQuote(customerNameValue, customerDesk, rushDaysValue);
             Program.Quotes.Add(customerQuote);
+
+
+
+            //  Saving JSON to text file
+            var json = "";
+            try
+            {
+                json = JsonConvert.SerializeObject(customerQuote);
+
+                string fileName = @"quotes.json";
+
+                if (!File.Exists(fileName))
+                {
+                    using (StreamWriter x = File.CreateText(fileName))
+                    {
+
+                    }
+                }
+                using (StreamWriter x = File.AppendText(fileName))
+                {
+                    x.WriteLine(json);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + "Error writing to file.");
+            }
+
+
 
             //private static Desk customerDesk = new Desk(widthValue, depthValue, numDrawersValue, surfaceMaterialValue);
             //private static DeskQuote customerQuote = new DeskQuote(customerNameValue, customerDesk, rushDaysValue);

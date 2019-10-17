@@ -8,10 +8,10 @@ namespace MegaDesk_Roper
 {
     class DeskQuote
     {
-        private string customerName;
-        private Desk customerDesk;
-        private int rushDays;
-        private int price;
+        public string customerName;
+        public Desk customerDesk;
+        public int rushDays;
+        public int price;
 
         public DeskQuote(string customerName, Desk customerDesk, int rushDays)
         {
