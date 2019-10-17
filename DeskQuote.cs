@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,22 +19,22 @@ namespace MegaDesk_Roper
             this.customerName = customerName;
             this.customerDesk = customerDesk;
             this.rushDays = rushDays;
-            this.price = setPrice();
+            this.price = SetPrice();
         }
 
-        private int setPrice()
+        private int SetPrice()
         {
             int BasePrice = 200;
             int Area = customerDesk.getWidth() * customerDesk.getDepth();
-            int SurfaceAreaPrice = getSurfaceAreaPrice(Area);
-            int DrawerPrice = getDrawerPrice(customerDesk.getNumDrawers());
-            int MaterialPrice = getMaterialPrice(customerDesk.getSurfaceMaterial());
-            int RushPrice = getRushPrice(rushDays, Area);
+            int SurfaceAreaPrice = GetSurfaceAreaPrice(Area);
+            int DrawerPrice = GetDrawerPrice(customerDesk.getNumDrawers());
+            int MaterialPrice = GetMaterialPrice(customerDesk.getSurfaceMaterial());
+            int RushPrice = GetRushOrder(rushDays, Area);
        
             return BasePrice + SurfaceAreaPrice + DrawerPrice + MaterialPrice + RushPrice;
         }
 
-        private int getSurfaceAreaPrice(int surfaceArea)
+        private int GetSurfaceAreaPrice(int surfaceArea)
         {
             if(surfaceArea > 1000)
             {
@@ -44,12 +45,12 @@ namespace MegaDesk_Roper
             }
         }
 
-        private int getDrawerPrice(int numDrawers)
+        private int GetDrawerPrice(int numDrawers)
         {
             return numDrawers * 50;
         }
 
-        private int getMaterialPrice(DesktopMaterial material)
+        private int GetMaterialPrice(DesktopMaterial material)
         {
             switch (material)
             {
@@ -68,7 +69,52 @@ namespace MegaDesk_Roper
             }
         }
 
-        private int getRushPrice(int days, int surfaceArea)
+        public static int[,] GetPrices()
+        {
+            string[] lines = File.ReadAllLines(@"rushOrderPrices.txt");
+
+            int[,] rushPrice = new int[3, 3];
+
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    rushPrice[i, j] = Int32.Parse(lines[(i * 3) + j]);
+                }
+            }
+            return rushPrice;
+        }
+        public int GetRushOrder(int days, int surfaceArea)
+        {
+            int costRush = 0;
+
+            switch (days)
+            {
+                case 3:
+                    if (surfaceArea < 1000) { costRush = GetPrices()[0, 0]; }
+                    else if (surfaceArea >= 1000 && surfaceArea <= 2000) { costRush = GetPrices()[0, 1]; }
+                    else { costRush = GetPrices()[0, 2]; }
+                    break;
+                case 5:
+                    if (surfaceArea < 1000) { costRush = GetPrices()[1, 0]; }
+                    else if (surfaceArea >= 1000 && surfaceArea <= 2000) { costRush = GetPrices()[1, 1]; }
+                    else { costRush = GetPrices()[1, 2]; }
+                    break;
+                case 7:
+                    if (surfaceArea < 1000) { costRush = GetPrices()[2, 0]; }
+                    else if (surfaceArea >= 1000 && surfaceArea <= 2000) { costRush = GetPrices()[2, 1]; }
+                    else { costRush = GetPrices()[2, 2]; }
+                    break;
+                default:
+                    costRush = 0;
+                    break;
+            }
+
+            return costRush;
+
+        }
+
+        /*private int getRushPrice(int days, int surfaceArea)
         {
             switch (days){
                 case 3:
@@ -87,39 +133,39 @@ namespace MegaDesk_Roper
                     return 0;
             }
         }
-
-        public int getPrice()
+        */
+        public int GetPrice()
         {
             return price;
         }
 
 
-        public string getName()
+        public string GetName()
         {
             return customerName;
         }
 
-        public int getRushDays()
+        public int GetRushDays()
         {
             return rushDays;
         }
 
-        public int getWidth()
+        public int GetWidth()
         {
             return customerDesk.getWidth();
         }
 
-        public int getDepth()
+        public int GetDepth()
         {
             return customerDesk.getDepth();
         }
 
-        public int getNumDrawers()
+        public int GetNumDrawers()
         {
             return customerDesk.getNumDrawers();
         }
 
-        public DesktopMaterial getMaterial()
+        public DesktopMaterial GetMaterial()
         {
             return customerDesk.getSurfaceMaterial();
         }

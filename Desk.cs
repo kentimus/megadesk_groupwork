@@ -17,10 +17,10 @@ namespace MegaDesk_Roper
 
     class Desk
     {
-        public int Width;
-        public int Depth;
-        public int NumDrawers;
-        public DesktopMaterial SurfaceMaterial;
+        private int Width;
+        private int Depth;
+        private int NumDrawers;
+        private DesktopMaterial SurfaceMaterial;
         private const int MINWIDTH = 24;
         private const int MAXWIDTH = 96;
         private const int MINDEPTH = 12;

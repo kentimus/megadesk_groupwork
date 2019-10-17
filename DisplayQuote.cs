@@ -41,14 +41,17 @@ testRushOrder.Text = "";
             }*/
                 try
             {
+                int Area = customerQuote.GetWidth() * customerQuote.GetDepth();
+                int rDays = customerQuote.GetRushDays();
+
                 ResultsCustomerName.Text = customerQuote.GetName();
                 ResultsRushDays.Text = customerQuote.GetRushDays().ToString();
                 ResultsWidth.Text = customerQuote.GetWidth().ToString();
                 ResultsDepth.Text = customerQuote.GetDepth().ToString();
                 ResultsTotalPrice.Text = customerQuote.GetPrice().ToString();
                 ResultsNumDrawers.Text = customerQuote.GetNumDrawers().ToString();
-                ResultsSurfaceMaterial.Text = customerQuote.getMaterial().ToString();
-                //ResultRushOrder.Text = customerQuote.GetRushOrder().ToSteing();
+                ResultsSurfaceMaterial.Text = customerQuote.GetMaterial().ToString();
+                ResultRushOrder.Text = customerQuote.GetRushOrder(rDays,Area).ToString();
                     }
             catch
             {
