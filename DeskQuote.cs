@@ -1,5 +1,4 @@
 ﻿using System;
-using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,41 +8,32 @@ namespace MegaDesk_Roper
 {
     class DeskQuote
     {
-        private string customerName;
-        private Desk customerDesk;
-        private int rushDays;
-        private int price;
-        private int costRush;
-        
+        public string customerName;
+        public Desk customerDesk;
+        public int rushDays;
+        public int price;
 
         public DeskQuote(string customerName, Desk customerDesk, int rushDays)
         {
-
-            int Area = customerDesk.getWidth() * customerDesk.getDepth();
-
             this.customerName = customerName;
             this.customerDesk = customerDesk;
             this.rushDays = rushDays;
             this.price = setPrice();
-            int costRush = GetRushOrder(rushDays, Area);
-       
-            
         }
 
         private int setPrice()
         {
             int BasePrice = 200;
             int Area = customerDesk.getWidth() * customerDesk.getDepth();
-            int SurfaceAreaPrice = GetSurfaceAreaPrice(Area);
-            int DrawerPrice = GetDrawerPrice(customerDesk.getNumDrawers());
-            int MaterialPrice = GetMaterialPrice(customerDesk.getSurfaceMaterial());
-            int RushPrice = GetRushOrder(rushDays, Area);
-            
-            
+            int SurfaceAreaPrice = getSurfaceAreaPrice(Area);
+            int DrawerPrice = getDrawerPrice(customerDesk.getNumDrawers());
+            int MaterialPrice = getMaterialPrice(customerDesk.getSurfaceMaterial());
+            int RushPrice = getRushPrice(rushDays, Area);
+       
             return BasePrice + SurfaceAreaPrice + DrawerPrice + MaterialPrice + RushPrice;
         }
 
-        private int GetSurfaceAreaPrice(int surfaceArea)
+        private int getSurfaceAreaPrice(int surfaceArea)
         {
             if(surfaceArea > 1000)
             {
@@ -54,12 +44,12 @@ namespace MegaDesk_Roper
             }
         }
 
-        private int GetDrawerPrice(int numDrawers)
+        private int getDrawerPrice(int numDrawers)
         {
             return numDrawers * 50;
         }
 
-        private int GetMaterialPrice(DesktopMaterial material)
+        private int getMaterialPrice(DesktopMaterial material)
         {
             switch (material)
             {
@@ -78,7 +68,7 @@ namespace MegaDesk_Roper
             }
         }
 
-        /*private int getRushPrice(int days, int surfaceArea)
+        private int getRushPrice(int days, int surfaceArea)
         {
             switch (days){
                 case 3:
@@ -96,81 +86,35 @@ namespace MegaDesk_Roper
                 default:
                     return 0;
             }
-        }*/
-
-        public static int[,] GetPrices()
-        {
-            string[] lines = File.ReadAllLines(@"rushOrderPrices.txt");
-
-            int[,] rushPrice = new int[3, 3];
-
-            for (int i = 0; i < 3; i++)
-            {
-                for (int j = 0; j < 3; j++)
-                {
-                    rushPrice[i, j] = Int32.Parse(lines[(i * 3) + j]);
-                }
-            } 
-            return rushPrice;
-}
-            private static int GetRushOrder(int days, int surfaceArea)
-        {
-            int costRush = 0;
-
-            switch (days)
-            {
-                case 3:
-                    if (surfaceArea < 1000) { costRush = GetPrices()[0,0]; }
-                    else if (surfaceArea >= 1000 && surfaceArea <= 2000) { costRush = GetPrices()[0, 1]; }
-                    else { costRush = GetPrices()[0, 2]; }
-                    break;
-                case 5:
-                    if (surfaceArea < 1000) { costRush = GetPrices()[1, 0]; }
-                    else if (surfaceArea >= 1000 && surfaceArea <= 2000) { costRush = GetPrices()[1, 1]; }
-                    else { costRush = GetPrices()[1, 2]; }
-                    break;
-                case 7:
-                    if (surfaceArea < 1000) { costRush = GetPrices()[2, 0]; }
-                    else if (surfaceArea >= 1000 && surfaceArea <= 2000) { costRush = GetPrices()[2, 1]; }
-                    else { costRush = GetPrices()[2, 2]; }
-                    break;
-                default:
-                    costRush = 0;
-                    break;
-            }
-
-            return costRush;
-
         }
-      
 
-        public int GetPrice()
+        public int getPrice()
         {
             return price;
         }
 
 
-        public string GetName()
+        public string getName()
         {
             return customerName;
         }
 
-        public int GetRushDays()
+        public int getRushDays()
         {
             return rushDays;
         }
 
-        public int GetWidth()
+        public int getWidth()
         {
             return customerDesk.getWidth();
         }
 
-        public int GetDepth()
+        public int getDepth()
         {
             return customerDesk.getDepth();
         }
 
-        public int GetNumDrawers()
+        public int getNumDrawers()
         {
             return customerDesk.getNumDrawers();
         }

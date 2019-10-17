@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,5 +26,36 @@ namespace MegaDesk_Roper
             viewMainMenu.Show();
             this.Close();
         }
+
+        private void ViewAllQuotes_Load(object sender, EventArgs e)
+        {
+            
+            try
+            {
+                var file = @"quotes.json";
+                using (StreamReader sr = new StreamReader(file))
+                {
+                    string orders = sr.ReadToEnd();
+                    List<DeskQuote> deskOrders = JsonConvert.DeserializeObject<List<DeskQuote>>(orders);
+
+                    dataGridViewAllQuotes.DataSource = deskOrders.Select(desk => new
+                    {
+                        
+                    }).ToList();
+
+                    }
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + "Error");
+            }
+
+        }
+            
     }
+
 }
+
+
+
