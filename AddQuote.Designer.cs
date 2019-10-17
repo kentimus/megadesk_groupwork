@@ -49,6 +49,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.RushDays = new System.Windows.Forms.ComboBox();
             this.CustomerName = new System.Windows.Forms.TextBox();
+            this.CurrentDate = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Depth)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumDrawers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Width)).BeginInit();
@@ -120,7 +121,7 @@
             "Veneer",
             "Pine"});
             this.SurfaceMaterial.Location = new System.Drawing.Point(257, 281);
-            this.SurfaceMaterial.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SurfaceMaterial.Margin = new System.Windows.Forms.Padding(2);
             this.SurfaceMaterial.Name = "SurfaceMaterial";
             this.SurfaceMaterial.Size = new System.Drawing.Size(119, 30);
             this.SurfaceMaterial.TabIndex = 6;
@@ -130,7 +131,7 @@
             // 
             this.BackToMainMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BackToMainMenu.Location = new System.Drawing.Point(400, 36);
-            this.BackToMainMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BackToMainMenu.Margin = new System.Windows.Forms.Padding(2);
             this.BackToMainMenu.Name = "BackToMainMenu";
             this.BackToMainMenu.Size = new System.Drawing.Size(183, 33);
             this.BackToMainMenu.TabIndex = 9;
@@ -187,7 +188,7 @@
             // 
             this.Depth.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Depth.Location = new System.Drawing.Point(257, 217);
-            this.Depth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Depth.Margin = new System.Windows.Forms.Padding(2);
             this.Depth.Name = "Depth";
             this.Depth.Size = new System.Drawing.Size(118, 28);
             this.Depth.TabIndex = 4;
@@ -197,7 +198,7 @@
             // 
             this.NumDrawers.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NumDrawers.Location = new System.Drawing.Point(257, 249);
-            this.NumDrawers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NumDrawers.Margin = new System.Windows.Forms.Padding(2);
             this.NumDrawers.Name = "NumDrawers";
             this.NumDrawers.Size = new System.Drawing.Size(118, 28);
             this.NumDrawers.TabIndex = 5;
@@ -207,7 +208,7 @@
             // 
             this.Width.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Width.Location = new System.Drawing.Point(257, 183);
-            this.Width.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Width.Margin = new System.Windows.Forms.Padding(2);
             this.Width.Name = "Width";
             this.Width.Size = new System.Drawing.Size(118, 28);
             this.Width.TabIndex = 3;
@@ -217,7 +218,7 @@
             // 
             this.CreateQuoteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CreateQuoteButton.Location = new System.Drawing.Point(256, 321);
-            this.CreateQuoteButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CreateQuoteButton.Margin = new System.Windows.Forms.Padding(2);
             this.CreateQuoteButton.Name = "CreateQuoteButton";
             this.CreateQuoteButton.Size = new System.Drawing.Size(118, 33);
             this.CreateQuoteButton.TabIndex = 8;
@@ -281,7 +282,7 @@
             "7",
             "14"});
             this.RushDays.Location = new System.Drawing.Point(256, 122);
-            this.RushDays.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RushDays.Margin = new System.Windows.Forms.Padding(2);
             this.RushDays.Name = "RushDays";
             this.RushDays.Size = new System.Drawing.Size(119, 30);
             this.RushDays.TabIndex = 2;
@@ -291,17 +292,29 @@
             // 
             this.CustomerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CustomerName.Location = new System.Drawing.Point(257, 90);
-            this.CustomerName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CustomerName.Margin = new System.Windows.Forms.Padding(2);
             this.CustomerName.Name = "CustomerName";
             this.CustomerName.Size = new System.Drawing.Size(119, 28);
             this.CustomerName.TabIndex = 1;
             this.CustomerName.TextChanged += new System.EventHandler(this.CustomerName_TextChanged);
+            // 
+            // CurrentDate
+            // 
+            this.CurrentDate.AutoSize = true;
+            this.CurrentDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CurrentDate.Location = new System.Drawing.Point(31, 325);
+            this.CurrentDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.CurrentDate.Name = "CurrentDate";
+            this.CurrentDate.Size = new System.Drawing.Size(46, 24);
+            this.CurrentDate.TabIndex = 24;
+            this.CurrentDate.Text = "date";
             // 
             // AddQuotesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.CurrentDate);
             this.Controls.Add(this.CustomerName);
             this.Controls.Add(this.RushDays);
             this.Controls.Add(this.CustomerNameHelperText);
@@ -323,7 +336,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AddQuotesForm";
             this.Text = "Add New Quote";
             this.Load += new System.EventHandler(this.AddQuotesForm_Load);
@@ -358,5 +371,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox RushDays;
         private System.Windows.Forms.TextBox CustomerName;
+        private System.Windows.Forms.Label CurrentDate;
     }
 }

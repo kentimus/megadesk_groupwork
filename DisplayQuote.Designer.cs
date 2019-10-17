@@ -46,6 +46,8 @@
             this.ResultsCustomerName = new System.Windows.Forms.Label();
             this.ResultRushOrder = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.OrderDateLabel = new System.Windows.Forms.Label();
+            this.OrderDate = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // BackToMainMenu
@@ -240,11 +242,35 @@
             this.label10.TabIndex = 37;
             this.label10.Text = "Rush Cost";
             // 
+            // OrderDateLabel
+            // 
+            this.OrderDateLabel.AutoSize = true;
+            this.OrderDateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OrderDateLabel.Location = new System.Drawing.Point(158, 384);
+            this.OrderDateLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.OrderDateLabel.Name = "OrderDateLabel";
+            this.OrderDateLabel.Size = new System.Drawing.Size(132, 29);
+            this.OrderDateLabel.TabIndex = 39;
+            this.OrderDateLabel.Text = "Order Date";
+            // 
+            // OrderDate
+            // 
+            this.OrderDate.AutoSize = true;
+            this.OrderDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OrderDate.Location = new System.Drawing.Point(11, 384);
+            this.OrderDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.OrderDate.Name = "OrderDate";
+            this.OrderDate.Size = new System.Drawing.Size(132, 29);
+            this.OrderDate.TabIndex = 40;
+            this.OrderDate.Text = "Order Date";
+            // 
             // DisplayQuote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(600, 422);
+            this.Controls.Add(this.OrderDate);
+            this.Controls.Add(this.OrderDateLabel);
             this.Controls.Add(this.ResultRushOrder);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.ResultsCustomerName);
@@ -292,5 +318,7 @@
         private System.Windows.Forms.Label ResultsCustomerName;
         private System.Windows.Forms.Label ResultRushOrder;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label OrderDateLabel;
+        private System.Windows.Forms.Label OrderDate;
     }
 }

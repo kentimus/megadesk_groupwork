@@ -8,6 +8,9 @@ namespace MegaDesk_Roper
 {
     static class Program
     {
+       // if quotes.json exists then put it inside the DeskQuotes object
+       
+
         public static DeskQuotes Quotes = new DeskQuotes();
         public static string TestString = "hello Kent";
 

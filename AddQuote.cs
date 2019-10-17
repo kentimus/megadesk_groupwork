@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace MegaDesk_Roper
 {
     public partial class AddQuotesForm : Form
@@ -18,6 +19,8 @@ namespace MegaDesk_Roper
         {
             InitializeComponent();
             CreateQuoteButton.Enabled = false;
+            DateTime now = DateTime.Now;
+            CurrentDate.Text = now.ToString("dd MMMM yyyy");
         }
 
         public static string customerNameValue;
@@ -26,6 +29,7 @@ namespace MegaDesk_Roper
         public static int depthValue;
         public static int numDrawersValue;
         public static string surfaceMaterialValue;
+        public static DateTime currentDate;
 
         private void BackToMainMenu_Click(object sender, EventArgs e)
         {
@@ -149,10 +153,13 @@ namespace MegaDesk_Roper
             depthValue = (int) Depth.Value;
             numDrawersValue = (int) NumDrawers.Value;
             surfaceMaterialValue = SurfaceMaterial.Text;
+
+            currentDate = DateTime.Now;
+            string orderDate = currentDate.ToString("dd MMMM yyyy");
             //rushCostValue = ;
 
             Desk customerDesk = new Desk(widthValue, depthValue, numDrawersValue, surfaceMaterialValue);
-            DeskQuote customerQuote = new DeskQuote(customerNameValue, customerDesk, rushDaysValue);
+            DeskQuote customerQuote = new DeskQuote(customerNameValue, customerDesk, rushDaysValue, orderDate);
             Program.Quotes.Add(customerQuote);
 
             //private static Desk customerDesk = new Desk(widthValue, depthValue, numDrawersValue, surfaceMaterialValue);
@@ -162,21 +169,42 @@ namespace MegaDesk_Roper
             var json = "";
             try
             {
-                json = JsonConvert.SerializeObject(customerQuote);
+
+                json = JsonConvert.SerializeObject(Program.Quotes);
 
                 string fileName = @"quotes.json";
+                List<DeskQuote> deskOrders = new List<DeskQuote>();
 
-                if (!File.Exists(fileName))
+                if (File.Exists(fileName))
                 {
-                    using (StreamWriter x = File.CreateText(fileName))
+                    using (StreamReader reader = new StreamReader(fileName))
                     {
-
+                        string quotes = reader.ReadToEnd();
+                        if(quotes.Length > 0)
+                        {
+                            deskOrders = JsonConvert.DeserializeObject<List<DeskQuote>>(quotes);
+                        }
+                        deskOrders.Add(customerQuote);
                     }
+
+                    // convert to Json
+                    var serializedOrders = JsonConvert.SerializeObject(deskOrders);
+                    // save to json
+                    File.WriteAllText(fileName, serializedOrders);
                 }
-                using (StreamWriter x = File.AppendText(fileName))
+                else
                 {
-                    x.WriteLine(json);
+                    deskOrders = new List<DeskQuote> { customerQuote };
+                    var serializedOrders = JsonConvert.SerializeObject(deskOrders);
+                    // save to json
+                    File.WriteAllText(fileName, serializedOrders);
                 }
+
+                //File.WriteAllText(@"quotes.json", JsonConvert.SerializeObject(Program.Quotes));
+               // using (StreamWriter x = File.WriteAllText(fileName))
+                //{
+                 //   x.WriteLine(json);
+               // }
             }
             catch (Exception ex)
             {

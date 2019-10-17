@@ -43,7 +43,7 @@ testRushOrder.Text = "";
             {
                 int Area = customerQuote.GetWidth() * customerQuote.GetDepth();
                 int rDays = customerQuote.GetRushDays();
-
+                OrderDateLabel.Text = customerQuote.GetDate();
                 ResultsCustomerName.Text = customerQuote.GetName();
                 ResultsRushDays.Text = customerQuote.GetRushDays().ToString();
                 ResultsWidth.Text = customerQuote.GetWidth().ToString();

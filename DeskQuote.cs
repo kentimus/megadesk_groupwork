@@ -13,13 +13,15 @@ namespace MegaDesk_Roper
         public Desk customerDesk;
         public int rushDays;
         public int price;
+        public string orderDate;
 
-        public DeskQuote(string customerName, Desk customerDesk, int rushDays)
+        public DeskQuote(string customerName, Desk customerDesk, int rushDays, string orderDate)
         {
             this.customerName = customerName;
             this.customerDesk = customerDesk;
             this.rushDays = rushDays;
             this.price = SetPrice();
+            this.orderDate = orderDate;
         }
 
         private int SetPrice()
@@ -168,6 +170,11 @@ namespace MegaDesk_Roper
         public DesktopMaterial GetMaterial()
         {
             return customerDesk.getSurfaceMaterial();
+        }
+
+        public string GetDate()
+        {
+            return orderDate;
         }
     }
 }

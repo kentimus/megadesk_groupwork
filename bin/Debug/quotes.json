@@ -1,2 +1,1 @@
-{"customerName":"batman","customerDesk":{},"rushDays":3,"price":610}
-{"customerName":"Hulk","customerDesk":{"Width":25,"Depth":35,"NumDrawers":5,"SurfaceMaterial":0},"rushDays":3,"price":710}
+[{"customerName":"Peter Parker","customerDesk":{"Width":31,"Depth":37,"NumDrawers":2,"SurfaceMaterial":0},"rushDays":3,"price":1717,"orderDate":"17 October 2019"}]
