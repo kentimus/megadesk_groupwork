@@ -147,6 +147,7 @@ namespace MegaDesk_Roper
             depthValue = (int) Depth.Value;
             numDrawersValue = (int) NumDrawers.Value;
             surfaceMaterialValue = SurfaceMaterial.Text;
+            //rushCostValue = ;
 
             Desk customerDesk = new Desk(widthValue, depthValue, numDrawersValue, surfaceMaterialValue);
             DeskQuote customerQuote = new DeskQuote(customerNameValue, customerDesk, rushDaysValue);
@@ -173,6 +174,11 @@ namespace MegaDesk_Roper
         private void RushDays_SelectedIndexChanged(object sender, EventArgs e)
         {
             CheckForm();
+        }
+
+        private void AddQuotesForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

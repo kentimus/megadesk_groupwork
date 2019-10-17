@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,16 +31,25 @@ namespace MegaDesk_Roper
         private void DisplayQuote_Load(object sender, EventArgs e)
         {
             customerQuote = Program.Quotes.GetLatest();
-            try
+           /* string[] prices = File.ReadAllLines(@"RushOrderPrices.txt");
+testRushOrder.Text = "";
+            foreach (string rushprice in prices)
             {
-                ResultsCustomerName.Text = customerQuote.getName();
-                ResultsRushDays.Text = customerQuote.getRushDays().ToString();
-                ResultsWidth.Text = customerQuote.getWidth().ToString();
-                ResultsDepth.Text = customerQuote.getDepth().ToString();
-                ResultsTotalPrice.Text = customerQuote.getPrice().ToString();
-                ResultsNumDrawers.Text = customerQuote.getNumDrawers().ToString();
+                
+                // Use a tab to indent each line of the file.
+                testRushOrder.Text += "\t" + rushprice + " ";
+            }*/
+                try
+            {
+                ResultsCustomerName.Text = customerQuote.GetName();
+                ResultsRushDays.Text = customerQuote.GetRushDays().ToString();
+                ResultsWidth.Text = customerQuote.GetWidth().ToString();
+                ResultsDepth.Text = customerQuote.GetDepth().ToString();
+                ResultsTotalPrice.Text = customerQuote.GetPrice().ToString();
+                ResultsNumDrawers.Text = customerQuote.GetNumDrawers().ToString();
                 ResultsSurfaceMaterial.Text = customerQuote.getMaterial().ToString();
-            }
+                //ResultRushOrder.Text = customerQuote.GetRushOrder().ToSteing();
+                    }
             catch
             {
                 ResultsCustomerName.Text = "";
