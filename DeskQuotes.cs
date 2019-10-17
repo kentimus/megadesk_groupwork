@@ -8,7 +8,7 @@ namespace MegaDesk_Roper
 {
     class DeskQuotes
     {
-        private List<DeskQuote> quotes;
+        public List<DeskQuote> quotes;
 
         public DeskQuotes()
         {

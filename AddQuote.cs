@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -155,6 +157,33 @@ namespace MegaDesk_Roper
 
             //private static Desk customerDesk = new Desk(widthValue, depthValue, numDrawersValue, surfaceMaterialValue);
             //private static DeskQuote customerQuote = new DeskQuote(customerNameValue, customerDesk, rushDaysValue);
+
+            //  Saving JSON to text file
+            var json = "";
+            try
+            {
+                json = JsonConvert.SerializeObject(customerQuote);
+
+                string fileName = @"quotes.json";
+
+                if (!File.Exists(fileName))
+                {
+                    using (StreamWriter x = File.CreateText(fileName))
+                    {
+
+                    }
+                }
+                using (StreamWriter x = File.AppendText(fileName))
+                {
+                    x.WriteLine(json);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + "Error writing to file.");
+            }
+
+
 
 
             DisplayQuote viewDisplayQuote = new DisplayQuote();
