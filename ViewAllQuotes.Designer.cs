@@ -46,14 +46,16 @@
             // 
             // BackToMainMenu
             // 
+            this.BackToMainMenu.BackColor = System.Drawing.Color.White;
+            this.BackToMainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BackToMainMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BackToMainMenu.Location = new System.Drawing.Point(479, 19);
+            this.BackToMainMenu.Location = new System.Drawing.Point(611, 19);
             this.BackToMainMenu.Margin = new System.Windows.Forms.Padding(2);
             this.BackToMainMenu.Name = "BackToMainMenu";
-            this.BackToMainMenu.Size = new System.Drawing.Size(183, 56);
+            this.BackToMainMenu.Size = new System.Drawing.Size(134, 53);
             this.BackToMainMenu.TabIndex = 7;
-            this.BackToMainMenu.Text = "Back to Main Menu";
-            this.BackToMainMenu.UseVisualStyleBackColor = true;
+            this.BackToMainMenu.Text = "Main Menu";
+            this.BackToMainMenu.UseVisualStyleBackColor = false;
             this.BackToMainMenu.Click += new System.EventHandler(this.BackToMainMenu_Click);
             // 
             // label1
@@ -69,16 +71,17 @@
             // 
             // dataGridViewAllQuotes
             // 
-            this.dataGridViewAllQuotes.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dataGridViewAllQuotes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(1);
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewAllQuotes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewAllQuotes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewAllQuotes.ColumnHeadersHeight = 28;
             this.dataGridViewAllQuotes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CustomerName,
             this.Price,
@@ -89,11 +92,11 @@
             this.RushDays,
             this.OrderDate});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Blue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlLightLight;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewAllQuotes.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewAllQuotes.Location = new System.Drawing.Point(32, 105);
@@ -170,6 +173,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(774, 517);
             this.Controls.Add(this.dataGridViewAllQuotes);
             this.Controls.Add(this.BackToMainMenu);

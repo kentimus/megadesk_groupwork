@@ -40,7 +40,8 @@
             // 
             // AddNewQuoteButton
             // 
-            this.AddNewQuoteButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.AddNewQuoteButton.BackColor = System.Drawing.Color.White;
+            this.AddNewQuoteButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.AddNewQuoteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddNewQuoteButton.Location = new System.Drawing.Point(44, 98);
             this.AddNewQuoteButton.Margin = new System.Windows.Forms.Padding(2);
@@ -53,7 +54,8 @@
             // 
             // ViewQuotesButton
             // 
-            this.ViewQuotesButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.ViewQuotesButton.BackColor = System.Drawing.Color.White;
+            this.ViewQuotesButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ViewQuotesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ViewQuotesButton.Location = new System.Drawing.Point(44, 158);
             this.ViewQuotesButton.Margin = new System.Windows.Forms.Padding(2);
@@ -66,7 +68,8 @@
             // 
             // SearchQuotesButton
             // 
-            this.SearchQuotesButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.SearchQuotesButton.BackColor = System.Drawing.Color.White;
+            this.SearchQuotesButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.SearchQuotesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SearchQuotesButton.Location = new System.Drawing.Point(44, 217);
             this.SearchQuotesButton.Margin = new System.Windows.Forms.Padding(2);
@@ -79,13 +82,14 @@
             // 
             // ExitButton
             // 
-            this.ExitButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.ExitButton.BackColor = System.Drawing.Color.White;
+            this.ExitButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ExitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExitButton.ForeColor = System.Drawing.Color.Black;
-            this.ExitButton.Location = new System.Drawing.Point(401, 299);
+            this.ExitButton.Location = new System.Drawing.Point(454, 319);
             this.ExitButton.Margin = new System.Windows.Forms.Padding(2);
             this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(170, 46);
+            this.ExitButton.Size = new System.Drawing.Size(117, 36);
             this.ExitButton.TabIndex = 4;
             this.ExitButton.Text = "E&xit";
             this.ExitButton.UseVisualStyleBackColor = false;
@@ -116,6 +120,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
