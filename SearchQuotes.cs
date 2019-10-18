@@ -61,7 +61,49 @@ namespace MegaDesk_Roper
 
         private void SurfaceMaterial_SelectedIndexChanged(object sender, EventArgs e)
         {
-            MessageBox.Show(sender.ToString());
-        }
+            
+
+            string selectedMaterial = SurfaceMaterial.SelectedItem.ToString();
+            var file = @"quotes.json";
+
+            using (StreamReader sr = new StreamReader(file))
+            {
+                string orders = sr.ReadToEnd();
+                List<DeskQuote> deskOrders = JsonConvert.DeserializeObject<List<DeskQuote>>(orders);
+                List<DeskQuote> ordersToShow = new List<DeskQuote>();
+
+                if(selectedMaterial == "All")
+                {
+                    ordersToShow = deskOrders;
+                } else
+                {
+                    foreach (DeskQuote currentQuote in deskOrders)
+                    {
+
+                        if (currentQuote.GetMaterial().ToString() == selectedMaterial)
+                        {
+                            ordersToShow.Add(currentQuote);
+                        }
+                    }
+                }
+
+                
+
+                dataGridViewAllQuotes.DataSource = ordersToShow.Select(desk => new
+                {
+                    Width = desk.customerDesk.Width,
+                    Depth = desk.customerDesk.Depth,
+                    Drawers = desk.customerDesk.NumDrawers,
+                    SurfaceMaterial = desk.customerDesk.SurfaceMaterial,
+                    Price = desk.price,
+                    CustomerName = desk.customerName,
+                    RushDays = desk.rushDays,
+                    OrderDate = desk.orderDate
+
+                }).ToList();
+
+            }
+        }   
+            
     }
 }

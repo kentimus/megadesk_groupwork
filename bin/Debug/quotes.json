@@ -1,1 +1,1 @@
-[{"customerName":"Peter Parker","customerDesk":{"Width":31,"Depth":37,"NumDrawers":2,"SurfaceMaterial":0},"rushDays":3,"price":1717,"orderDate":"17 October 2019"}]
+[{"customerName":"Peter Parker","customerDesk":{"Width":31,"Depth":37,"NumDrawers":2,"SurfaceMaterial":0},"rushDays":3,"price":1717,"orderDate":"17 October 2019"},{"customerName":"Bob","customerDesk":{"Width":30,"Depth":30,"NumDrawers":7,"SurfaceMaterial":1},"rushDays":5,"price":690,"orderDate":"17 October 2019"}]
