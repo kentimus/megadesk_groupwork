@@ -40,7 +40,7 @@ namespace MegaDesk_Roper
         {
             if(surfaceArea > 1000)
             {
-                return surfaceArea;
+                return surfaceArea - 1000;
             } else
             {
                 return 0;
