@@ -43,7 +43,7 @@ namespace MegaDesk_Roper
             return (int)NumDrawers.Value;
         }
         
-
+        // Validate form to alert user when input is in/out of bounds
         private void CheckForm()
         {
             bool formOkay = true;
@@ -155,6 +155,7 @@ namespace MegaDesk_Roper
             surfaceMaterialValue = SurfaceMaterial.Text;
 
             currentDate = DateTime.Now;
+            // saved currentdate in string so the format is nice for the JSON file
             string orderDate = currentDate.ToString("dd MMMM yyyy");
             //rushCostValue = ;
 
@@ -166,6 +167,7 @@ namespace MegaDesk_Roper
             //private static DeskQuote customerQuote = new DeskQuote(customerNameValue, customerDesk, rushDaysValue);
 
             //  Saving JSON to text file
+            #region Save Quotes to JSON file / serialize/deserialize
             var json = "";
             try
             {
@@ -199,12 +201,13 @@ namespace MegaDesk_Roper
                     // save to json
                     File.WriteAllText(fileName, serializedOrders);
                 }
+                #endregion
 
                 //File.WriteAllText(@"quotes.json", JsonConvert.SerializeObject(Program.Quotes));
-               // using (StreamWriter x = File.WriteAllText(fileName))
+                // using (StreamWriter x = File.WriteAllText(fileName))
                 //{
-                 //   x.WriteLine(json);
-               // }
+                //   x.WriteLine(json);
+                // }
             }
             catch (Exception ex)
             {

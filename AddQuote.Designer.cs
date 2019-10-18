@@ -70,7 +70,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(28, 187);
+            this.label2.Location = new System.Drawing.Point(83, 164);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 24);
@@ -81,7 +81,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(28, 221);
+            this.label3.Location = new System.Drawing.Point(83, 196);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 24);
@@ -92,18 +92,18 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(28, 254);
+            this.label4.Location = new System.Drawing.Point(83, 228);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(173, 24);
+            this.label4.Size = new System.Drawing.Size(114, 24);
             this.label4.TabIndex = 9;
-            this.label4.Text = "Number of Drawers";
+            this.label4.Text = "# of Drawers";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(28, 288);
+            this.label5.Location = new System.Drawing.Point(83, 278);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(144, 24);
@@ -120,20 +120,20 @@
             "Rosewood",
             "Veneer",
             "Pine"});
-            this.SurfaceMaterial.Location = new System.Drawing.Point(257, 281);
+            this.SurfaceMaterial.Location = new System.Drawing.Point(256, 275);
             this.SurfaceMaterial.Margin = new System.Windows.Forms.Padding(2);
             this.SurfaceMaterial.Name = "SurfaceMaterial";
-            this.SurfaceMaterial.Size = new System.Drawing.Size(119, 30);
+            this.SurfaceMaterial.Size = new System.Drawing.Size(117, 30);
             this.SurfaceMaterial.TabIndex = 6;
             this.SurfaceMaterial.SelectedIndexChanged += new System.EventHandler(this.SurfaceMaterial_SelectedIndexChanged);
             // 
             // BackToMainMenu
             // 
             this.BackToMainMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BackToMainMenu.Location = new System.Drawing.Point(400, 36);
+            this.BackToMainMenu.Location = new System.Drawing.Point(400, 19);
             this.BackToMainMenu.Margin = new System.Windows.Forms.Padding(2);
             this.BackToMainMenu.Name = "BackToMainMenu";
-            this.BackToMainMenu.Size = new System.Drawing.Size(183, 33);
+            this.BackToMainMenu.Size = new System.Drawing.Size(189, 44);
             this.BackToMainMenu.TabIndex = 9;
             this.BackToMainMenu.Text = "Back to Main Menu";
             this.BackToMainMenu.UseVisualStyleBackColor = true;
@@ -143,7 +143,7 @@
             // 
             this.SurfaceHelperText.AutoSize = true;
             this.SurfaceHelperText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SurfaceHelperText.Location = new System.Drawing.Point(417, 288);
+            this.SurfaceHelperText.Location = new System.Drawing.Point(377, 282);
             this.SurfaceHelperText.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.SurfaceHelperText.Name = "SurfaceHelperText";
             this.SurfaceHelperText.Size = new System.Drawing.Size(84, 17);
@@ -154,7 +154,7 @@
             // 
             this.DrawersHelperText.AutoSize = true;
             this.DrawersHelperText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DrawersHelperText.Location = new System.Drawing.Point(417, 254);
+            this.DrawersHelperText.Location = new System.Drawing.Point(309, 235);
             this.DrawersHelperText.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DrawersHelperText.Name = "DrawersHelperText";
             this.DrawersHelperText.Size = new System.Drawing.Size(114, 17);
@@ -165,7 +165,7 @@
             // 
             this.DepthHelperText.AutoSize = true;
             this.DepthHelperText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DepthHelperText.Location = new System.Drawing.Point(417, 221);
+            this.DepthHelperText.Location = new System.Drawing.Point(309, 203);
             this.DepthHelperText.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DepthHelperText.Name = "DepthHelperText";
             this.DepthHelperText.Size = new System.Drawing.Size(175, 17);
@@ -177,7 +177,7 @@
             this.WidthHelperText.AutoSize = true;
             this.WidthHelperText.BackColor = System.Drawing.SystemColors.Control;
             this.WidthHelperText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WidthHelperText.Location = new System.Drawing.Point(417, 187);
+            this.WidthHelperText.Location = new System.Drawing.Point(309, 171);
             this.WidthHelperText.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.WidthHelperText.Name = "WidthHelperText";
             this.WidthHelperText.Size = new System.Drawing.Size(175, 17);
@@ -187,40 +187,43 @@
             // Depth
             // 
             this.Depth.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Depth.Location = new System.Drawing.Point(257, 217);
+            this.Depth.Location = new System.Drawing.Point(256, 197);
             this.Depth.Margin = new System.Windows.Forms.Padding(2);
             this.Depth.Name = "Depth";
-            this.Depth.Size = new System.Drawing.Size(118, 28);
+            this.Depth.Size = new System.Drawing.Size(49, 28);
             this.Depth.TabIndex = 4;
+            this.Depth.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Depth.ValueChanged += new System.EventHandler(this.Depth_ValueChanged);
             // 
             // NumDrawers
             // 
             this.NumDrawers.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NumDrawers.Location = new System.Drawing.Point(257, 249);
+            this.NumDrawers.Location = new System.Drawing.Point(256, 229);
             this.NumDrawers.Margin = new System.Windows.Forms.Padding(2);
             this.NumDrawers.Name = "NumDrawers";
-            this.NumDrawers.Size = new System.Drawing.Size(118, 28);
+            this.NumDrawers.Size = new System.Drawing.Size(49, 28);
             this.NumDrawers.TabIndex = 5;
+            this.NumDrawers.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.NumDrawers.ValueChanged += new System.EventHandler(this.NumDrawers_ValueChanged);
             // 
             // Width
             // 
             this.Width.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Width.Location = new System.Drawing.Point(257, 183);
+            this.Width.Location = new System.Drawing.Point(256, 165);
             this.Width.Margin = new System.Windows.Forms.Padding(2);
             this.Width.Name = "Width";
-            this.Width.Size = new System.Drawing.Size(118, 28);
+            this.Width.Size = new System.Drawing.Size(49, 28);
             this.Width.TabIndex = 3;
+            this.Width.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Width.ValueChanged += new System.EventHandler(this.Width_ValueChanged);
             // 
             // CreateQuoteButton
             // 
             this.CreateQuoteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CreateQuoteButton.Location = new System.Drawing.Point(256, 321);
+            this.CreateQuoteButton.Location = new System.Drawing.Point(256, 318);
             this.CreateQuoteButton.Margin = new System.Windows.Forms.Padding(2);
             this.CreateQuoteButton.Name = "CreateQuoteButton";
-            this.CreateQuoteButton.Size = new System.Drawing.Size(118, 33);
+            this.CreateQuoteButton.Size = new System.Drawing.Size(120, 36);
             this.CreateQuoteButton.TabIndex = 8;
             this.CreateQuoteButton.Text = "Create Quote";
             this.CreateQuoteButton.UseVisualStyleBackColor = true;
@@ -231,7 +234,7 @@
             this.RushDaysHelperText.AutoSize = true;
             this.RushDaysHelperText.BackColor = System.Drawing.SystemColors.Control;
             this.RushDaysHelperText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RushDaysHelperText.Location = new System.Drawing.Point(417, 128);
+            this.RushDaysHelperText.Location = new System.Drawing.Point(310, 129);
             this.RushDaysHelperText.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.RushDaysHelperText.Name = "RushDaysHelperText";
             this.RushDaysHelperText.Size = new System.Drawing.Size(176, 17);
@@ -242,7 +245,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(28, 128);
+            this.label7.Location = new System.Drawing.Point(83, 122);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(110, 24);
@@ -254,7 +257,7 @@
             this.CustomerNameHelperText.AutoSize = true;
             this.CustomerNameHelperText.BackColor = System.Drawing.SystemColors.Control;
             this.CustomerNameHelperText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CustomerNameHelperText.Location = new System.Drawing.Point(417, 93);
+            this.CustomerNameHelperText.Location = new System.Drawing.Point(381, 93);
             this.CustomerNameHelperText.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.CustomerNameHelperText.Name = "CustomerNameHelperText";
             this.CustomerNameHelperText.Size = new System.Drawing.Size(81, 17);
@@ -265,7 +268,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(28, 93);
+            this.label9.Location = new System.Drawing.Point(83, 90);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(147, 24);
@@ -284,7 +287,7 @@
             this.RushDays.Location = new System.Drawing.Point(256, 122);
             this.RushDays.Margin = new System.Windows.Forms.Padding(2);
             this.RushDays.Name = "RushDays";
-            this.RushDays.Size = new System.Drawing.Size(119, 30);
+            this.RushDays.Size = new System.Drawing.Size(50, 30);
             this.RushDays.TabIndex = 2;
             this.RushDays.SelectedIndexChanged += new System.EventHandler(this.RushDays_SelectedIndexChanged);
             // 
@@ -301,11 +304,11 @@
             // CurrentDate
             // 
             this.CurrentDate.AutoSize = true;
-            this.CurrentDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CurrentDate.Location = new System.Drawing.Point(31, 325);
+            this.CurrentDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CurrentDate.Location = new System.Drawing.Point(11, 330);
             this.CurrentDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.CurrentDate.Name = "CurrentDate";
-            this.CurrentDate.Size = new System.Drawing.Size(46, 24);
+            this.CurrentDate.Size = new System.Drawing.Size(36, 17);
             this.CurrentDate.TabIndex = 24;
             this.CurrentDate.Text = "date";
             // 
@@ -337,7 +340,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "AddQuotesForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add New Quote";
             this.Load += new System.EventHandler(this.AddQuotesForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Depth)).EndInit();

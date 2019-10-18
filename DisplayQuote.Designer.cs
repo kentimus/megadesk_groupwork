@@ -245,24 +245,24 @@
             // OrderDateLabel
             // 
             this.OrderDateLabel.AutoSize = true;
-            this.OrderDateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OrderDateLabel.Location = new System.Drawing.Point(158, 384);
+            this.OrderDateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OrderDateLabel.Location = new System.Drawing.Point(102, 384);
             this.OrderDateLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.OrderDateLabel.Name = "OrderDateLabel";
-            this.OrderDateLabel.Size = new System.Drawing.Size(132, 29);
+            this.OrderDateLabel.Size = new System.Drawing.Size(88, 20);
             this.OrderDateLabel.TabIndex = 39;
             this.OrderDateLabel.Text = "Order Date";
             // 
             // OrderDate
             // 
             this.OrderDate.AutoSize = true;
-            this.OrderDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OrderDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OrderDate.Location = new System.Drawing.Point(11, 384);
             this.OrderDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.OrderDate.Name = "OrderDate";
-            this.OrderDate.Size = new System.Drawing.Size(132, 29);
+            this.OrderDate.Size = new System.Drawing.Size(92, 20);
             this.OrderDate.TabIndex = 40;
-            this.OrderDate.Text = "Order Date";
+            this.OrderDate.Text = "Order Date:";
             // 
             // DisplayQuote
             // 
@@ -290,6 +290,8 @@
             this.Controls.Add(this.BackToMainMenu);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "DisplayQuote";
             this.Text = "DisplayQuote";
             this.Load += new System.EventHandler(this.DisplayQuote_Load);
